@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-const-soft": {
+    "angular-pedido": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,20 +13,24 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-const-soft",
+            "outputPath": "dist/angular-pedido",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -41,7 +45,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -50,6 +53,11 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -58,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-const-soft:build"
+            "browserTarget": "angular-pedido:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-const-soft:build:production"
+              "browserTarget": "angular-pedido:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-const-soft:build"
+            "browserTarget": "angular-pedido:build"
           }
         },
         "test": {
@@ -106,15 +114,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-const-soft:serve"
+            "devServerTarget": "angular-pedido:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-const-soft:serve:production"
+              "devServerTarget": "angular-pedido:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "angular-const-soft"
+    }
+  },
+  "defaultProject": "angular-pedido",
+  "cli": {
+    "analytics": "bba7bf88-47af-419f-97a7-9f79de6fe63a"
+  }
 }

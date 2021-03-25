@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Lista de Pedidos</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome Cliente</th>
+            <th>Descrição</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pedido of pedidos | async">
+            <td>{{pedido.id}}</td>
+            <td>{{pedido.nomeCliente}}</td>
+            <td>{{pedido.descricao}}</td>
+            <td>
+              <button (click)="deletePedido(pedido.id)" class="btn btn-danger">Excluir</button>
+              <button (click)="updatePedido(pedido.id)" class="btn btn-info" style="margin-left: 10px">Atualizar</button>
+              <button (click)="pedidoDetails(pedido.id)" class="btn btn-info" style="margin-left: 10px">Detalhes</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

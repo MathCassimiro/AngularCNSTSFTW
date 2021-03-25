@@ -1,0 +1,23 @@
+<h3>Atualizar Pedido</h3>
+<div style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Nome Cliente</label>
+            <input type="text" class="form-control" id="nomeCliente" required [(ngModel)]="pedido.nomeCliente"
+                name="nomeCliente">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Descrição</label>
+            <input type="text" class="form-control" id="descricao" required [(ngModel)]="pedido.descricao"
+                name="descricao">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Valor</label>
+            <input type="number" class="form-control" id="valor" required [(ngModel)]="pedido.valor" name="valor">
+        </div>
+
+        <button type="submit" class="btn btn-success">Salvar</button>
+    </form>
+</div>

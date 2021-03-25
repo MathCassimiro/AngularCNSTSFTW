@@ -1,0 +1,21 @@
+<h2>Detalhe do Pedido</h2>
+
+<hr />
+<div *ngIf="pedido">
+    <div>
+        <label><b>ID: </b></label> {{pedido.id}}
+    </div>
+    <div>
+        <label><b>Nome do Cliente: </b></label> {{pedido.nomeCliente}}
+    </div>
+    <div>
+        <label><b>Descrição: </b></label> {{pedido.descricao}}
+    </div>
+    <div>
+        <label><b>Valor: </b></label> {{pedido.valor}}
+    </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Voltar</button><br>
