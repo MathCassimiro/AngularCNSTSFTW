@@ -1,0 +1,40 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Lista de Colaboradores</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Codigo</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Status</th>
+            <th>Data de Nascimento</th>
+            <th>Endereco</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Usuario</th>
+            <th>Acoes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let colaborador of Colaborador | async">
+            <td>{{colaborador.codigo}}</td>
+            <td>{{colaborador.nome}}</td>
+            <td>{{colaborador.cpf}}</td>
+            <td>{{colaborador.status}}</td>
+            <td>{{colaborador.dataNascimento}}</td>
+            <td>{{colaborador.endereco}}</td>
+            <td>{{colaborador.email}}</td>
+            <td>{{colaborador.telefone}}</td>
+            <td>{{colaborador.usuario}}</td>
+            <td><button (click)="deleteColaborador(colaborador.id)" class="btn btn-danger">Excluir</button>
+                <button (click)="updateColaborador(colaborador.id)" class="btn btn-info" style="margin-left: 10px">Atualizar</button>
+                <button (click)="colaboradorDetails(colaborador.id)" class="btn btn-info" style="margin-left: 10px">Detalhes</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
