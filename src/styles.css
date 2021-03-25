@@ -4,9 +4,17 @@
 .footer {
     position: absolute;
     bottom: 0;
+<<<<<<< Updated upstream
     width:100%;
+=======
+    width: 100%;
+>>>>>>> Stashed changes
     height: 70px;
     background-color: blue;
     text-align: center;
     color: white;
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

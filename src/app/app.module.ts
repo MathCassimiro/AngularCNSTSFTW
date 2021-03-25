@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+<<<<<<< Updated upstream
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,25 @@ import { UpdatePedidoComponent } from './update-pedido/update-pedido.component';
     PedidoDetailsComponent,
     PedidoListComponent,
     UpdatePedidoComponent
+=======
+
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { CreateColaboradorComponent } from './create-colaborador/create-colaborador.component';
+import { ColaboradorDetailsComponent } from './colaborador-details/colaborador-details.component';
+import { ColaboradorListComponent } from './colaborador-list/colaborador-list.component';
+import { UpdateColaboradorComponent } from './update-colaborador/update-colaborador.component';
+import { HttpClientModule } from '@angular/common/http';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    CreateColaboradorComponent,
+    ColaboradorDetailsComponent,
+    ColaboradorListComponent,
+    UpdateColaboradorComponent
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,

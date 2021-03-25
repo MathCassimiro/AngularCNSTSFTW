@@ -125,8 +125,14 @@
       }
     }
   },
+<<<<<<< Updated upstream
   "defaultProject": "angular-pedido",
   "cli": {
     "analytics": "bba7bf88-47af-419f-97a7-9f79de6fe63a"
+=======
+  "defaultProject": "angular-const-soft",
+  "cli": {
+    "analytics": "7733b573-42f6-414d-905f-bfc94bf2187b"
+>>>>>>> Stashed changes
   }
 }

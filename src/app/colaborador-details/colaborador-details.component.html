@@ -1,0 +1,36 @@
+<h2>Informacoes dos Colaboradores</h2> 
+
+<hr/>
+<div *ngIf="colaboradores">
+  <div>
+    <label><b>Codigo:  </b></label> {{colaborador.codigo}}
+  </div>
+  <div>
+    <label><b>Nome: </b></label> {{colaborador.nome}}
+  </div>
+  <div>
+    <label><b>Cpf: </b></label> {{colaborador.cpf}}
+  </div>  
+</div>
+<label><b>Status: </b></label> {{colaborador.status}}
+  </div>  
+</div>
+<label><b>Data de Nascimento: </b></label> {{colaborador.dataNascimento}}
+  </div>  
+</div>
+<label><b>Endereço: </b></label> {colaborador.endereco}}
+  </div>  
+</div>
+<label><b>Email: </b></label> {{colaborador.email}}
+  </div>  
+</div>
+<label><b>Telefone: </b></label> {{colaborador.telefone}}
+  </div>  
+</div>
+<label><b>Usuario: </b></label> {{colaborador.usuario}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Voltar</button><br>
